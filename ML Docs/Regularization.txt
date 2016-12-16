@@ -1,0 +1,4 @@
+why is it that by choosing very large lamda(regularization) term theta1,theta2,theta3,theta4 etc will be equal to near to zero!
+
+it’s b/c the lambda term multiples the expression and is then subtracted
+so as lambda gets big, you’re basically subtracting theta from theta = 0

@@ -1,0 +1,4 @@
+it's because the way we update theta when using regularizations.
+for example consider Regularized Linear Regression, when using Gradient Descent this is how we update theta:
+theta = theta *(1- alpha*(lambda/m)) - alpha *(some_terms)
+if lambda is large then the term (1-alpha*labmda/m) will be close to 0 and intern theta value will get close to zero.

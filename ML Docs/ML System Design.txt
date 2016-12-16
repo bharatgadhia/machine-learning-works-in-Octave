@@ -1,0 +1,39 @@
+If you have very skewed classes it becomes much harder to use just classification accuracy, because you can get very high classification accuracies or very low errors, and it's not always clear if doing so is really improving the quality of your classifier because predicting y equals 0 all the time doesn't seem like a particularly good classifier. 
+
+And in particular if we have a learning algorithm that predicts y equals zero all the time, if it predicts no one has cancer, then this classifier will have a recall equal to zero, because there won't be any true positives and so that's a quick way for us to recognize that, you know, a classifier that predicts y equals 0 all the time, just isn't a very good classifier. 
+And more generally, even for settings where we have very skewed classes, it's not possible for an algorithm to sort of "cheat" and somehow get a very high precision and a very high recall by doing some simple thing like predicting y equals 0 all the time or predicting y equals 1 all the time. And so we're much more sure that a classifier of a high precision or high recall actually is a good classifier, and this gives us a more useful evaluation metric that is a more direct way to actually understand whether, you know, our algorithm may be doing well. 
+
+So for the problem of skewed classes precision recall gives us more direct insight into how the learning algorithm is doing and this is often a much better way to evaluate our learning algorithms, than looking at classification error or classification accuracy, when the classes are very skewed. 
+
+P=TP/(TP+FP)
+
+High precision is good (i.e. closer to 1)
+
+--You want a big number, because you want false positive to be as close to 0 as possible
+--------------
+
+R=TP/(TP+FN)
+
+High recall is good (i.e. closer to 1)
+
+--You want a big number, because you want false negative to be as close to 0 as possible
+
+
+
+
+Suppose you are working on a spam classifier, where spam
+
+emails are positive examples (y=1) and non-spam emails are
+
+negative examples (y=0). You have a training set of emails
+
+in which 99% of the emails are non-spam and the other 1% is
+
+spam. Which of the following statements are true? Check all
+
+that apply.
+
+Right Answers
+ If you always predict non-spam (output y=0), your classifier will have an accuracy of 99%. 
+ If you always predict non-spam (output y=0), your classifier will have a recall of 0%. 
+ If you always predict spam (output y=1), your classifier will have a recall of 100% and precision of 1%. 
